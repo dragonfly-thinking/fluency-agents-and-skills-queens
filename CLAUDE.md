@@ -5,7 +5,7 @@ Thinking AI Fluency course — 7 specialist subagents, 18 skills, MCP setup guid
 course notes. The user took (or is taking) the course; this kit is what they walk away with.
 This edition adds four Canadian-law tools (the `citation-checker` ⚖️ subagent + `check-citations`,
 `canadian-case-law`, and `trade-jurisprudence` skills) and the `mcp/a2aj.md` connection guide.
-It's a **private** cohort kit, distributed as a ZIP — not a public download.
+It's the Queen's-Law cohort edition of the public kit.
 
 ## Key resources — know your way around
 

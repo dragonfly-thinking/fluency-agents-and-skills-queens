@@ -2,7 +2,7 @@
 
 **You are an AI coding agent (Claude Code or Codex). The user has asked you to set up this kit. Follow the steps for the user's runtime below.** This installs 7 specialist subagents and 18 skills into the user's environment so they're available in every session, not just this folder.
 
-> **This is the Queen's Law edition** — a private cohort kit distributed as a ZIP (from the course resource hub), **not** a public download. Install from the folder the user already has on disk; do not try to fetch it from GitHub.
+> **This is the Queen's Law edition** — the standard kit plus four Canadian-law tools (the ⚖️ items below). It's public, like the standard kit; install from the link or a local copy.
 
 If you don't know which runtime you're in: you're **Claude Code** if you read `CLAUDE.md` and use `.claude/`; you're **Codex** if you read `AGENTS.md` and use `.codex/`. If unsure, ask the user.
 
@@ -21,10 +21,22 @@ The repo ships both `.claude/` (Claude Code format) and `.codex/` (Codex format)
 
 ## Step 0 — get the kit onto disk
 
-This edition is **private** and distributed as a **ZIP** (from the course resource hub) — there is no public download, so don't try to `curl` or `git clone` it from GitHub. The user already has the folder; just install from it.
+You may have been given only this repo's **URL**. The install commands below assume the kit's files are on the user's machine, so get them there first. **Do not install by fetching files one at a time over the web** — you'll miss subfolders. No GitHub account is needed; the repo is public.
 
-- **If you're reading this file locally**, the kit is already on disk — it's ready to install. Note where it lives so you can point the user at `course-notes/` and `mcp/` afterwards.
-- **If the user says they downloaded it** (e.g. a ZIP from the course hub): look for the unzipped folder — usually in `~/Downloads`, possibly still zipped (a name like `fluency-agents-and-skills-queens`). Unzip if needed, then **move it somewhere durable** before installing, e.g. `mv ~/Downloads/fluency-agents-and-skills-queens ~/fluency-agents-and-skills-queens`. Downloads folders get purged, and `course-notes/` + `mcp/` need to live on after install.
+- **If you're reading this file locally**, the kit is already on disk and ready to install — but if it might be an older copy from a previous session, re-download the current version (below) and install that.
+- **Otherwise, fetch it yourself — don't assume `git` is installed.** On a fresh Mac even running `git` can trigger an install prompt that hangs you. Default to the plain **ZIP download** — no git, no account. This is also the **update path**: re-downloading always gets the latest and replaces an older copy.
+
+```bash
+# No git needed — also the update path; replaces any existing copy
+curl -L https://github.com/dragonfly-thinking/fluency-agents-and-skills-queens/archive/refs/heads/main.zip -o /tmp/queens-kit.zip
+rm -rf ~/fluency-agents-and-skills-queens && unzip -q /tmp/queens-kit.zip -d ~ && mv ~/fluency-agents-and-skills-queens-main ~/fluency-agents-and-skills-queens
+```
+
+Only if `git` is *already* installed, cloning is a fine alternative (later updates become a `git pull`):
+
+```bash
+git clone https://github.com/dragonfly-thinking/fluency-agents-and-skills-queens.git ~/fluency-agents-and-skills-queens
+```
 
 Use `~/fluency-agents-and-skills-queens` as the standard location — run the install commands below from inside it.
 
